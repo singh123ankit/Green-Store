@@ -1,0 +1,26 @@
+header.header 
+  nav 
+    a(href='/')
+      img.logo(src='/images/logo.jpeg',alt='logo')
+    ul.nav--items.nav--user 
+      li 
+        a(href='/message')
+          svg.icons.cart-icon(xmlns='http://www.w3.org/2000/svg',fill='none', viewBox='0 0 24 24',stroke='currentColor',stroke-width='2')
+            path(stroke-linecap='round',stroke-linejoin='round',d='M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z')
+      if user
+        li
+          a.nav__el.nav__el--logout Log out 
+        li
+          a.nav__el(href='/me')
+             - if(!user.photo)
+                  img.nav__user-img(src=`/images/users/default.jpg`, alt='User photo')
+             -  else
+                  img.nav__user-img(src=`/images/users/${user.photo}`, alt='User photo')
+             span= user.name.split(' ')[0]
+      else 
+        li 
+          a.nav__el(href='/login') Log in
+        li 
+          a.nav__el.nav__el--cta(href='/signup') Sign up
+        li 
+          a.nav__el.nav__el--cta(href='/sellersignup') Become a Seller

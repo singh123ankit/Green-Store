@@ -1,0 +1,16 @@
+extends base
+block content
+  body
+    h1(style='text-align: center;') Contact Us
+    .contact-box
+      form
+        input.input-field(type='text', placeholder='Your Name')
+        | &#x9;&#x9;
+        input.input-field(type='email', placeholder='Your email')
+        | &#x9;&#x9;
+        input.input-field(type='text', placeholder='subject')
+        | &#x9;&#x9;
+        textarea.input-field.textarea-field(type='text', placeholder='Your message')
+        | &#x9;&#x9;
+        button.btn(type='button') Send Message
+      

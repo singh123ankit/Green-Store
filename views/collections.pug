@@ -1,0 +1,26 @@
+extends base
+
+block content
+  main.main 
+    .card-container 
+      each product in products
+        .card 
+          .card__picture 
+            img.card__picture-img(src=`/images/products/${product.imageCover}`,alt=`${product.name}`)
+          .card__details 
+            h2.card__heading=`${product.name}`
+            h3.card__sub-headings=`Type:    ${product.type}`
+            h3.card__sub-headings=`Feature:    ${product.feature}`
+            h3.card__sub-headings-price=`Price:   ₹${product.price}`
+            h3.card__sub-headings=`Minimum Purchase:   ₹${product.minimumPurchase}`
+            h3.card__sub-headings=`Company Name:    ${product.businessEntity}`
+            h3.card__sub-headings=`Company Location:    ${product.location}`
+            h3.card__sub-headings=`Contact Number:    ${product.contactNumber}`
+            p.card__text=product.description
+          .card__footer 
+            h2.card__footer-text 
+              if product.available 
+                | Available 
+              else 
+                | Not in Stock
+            a.btn.btn--green.btn--small(href='/message') Add to Cart

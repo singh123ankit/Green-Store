@@ -1,0 +1,91 @@
+extends base
+
+block content
+  .carousel-container
+      img.slide-image1.myslides(src='/images/slideimage-1.jpg', alt='flower', height='470px', width='100%')
+      img.slide-image2.myslides(src='/images/slideimage-2.jpg', alt='flower', height='470px', width='100%')
+      img.slide-image3.myslides(src='/images/slideimage-3.jpg', alt='flower', height='470px', width='100%')
+      img.slide-image4.myslides(src='/images/slideimage-4.jpg', alt='pots', height='470px', width='100%')
+      img.slide-image4.myslides(src='/images/slideimage-9.jpg', alt='pots', height='470px', width='100%')
+      img.slide-image5.myslides(src='/images/slideimage-5.jpg', alt='fruit', height='470px', width='100%')
+      img.slide-image6.myslides(src='/images/slideimage-6.jpg', alt='flower', height='470px', width='100%')
+      img.slide-image7.myslides(src='/images/slideimage-7.jpg', alt='flower', height='470px', width='100%')
+      img.slide-image8.myslides(src='/images/slideimage-8.jpg', alt='flower', height='470px', width='100%')
+      button.btn--slider.btn--left
+        svg.btn-icon(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+          path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M15 19l-7-7 7-7')
+      button.btn--slider.btn--right
+        svg.btn-icon(xmlns='http://www.w3.org/2000/svg', fill='none', viewBox='0 0 24 24', stroke='currentColor')
+          path(stroke-linecap='round', stroke-linejoin='round', stroke-width='2', d='M9 5l7 7-7 7')
+      .dots
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+        button.dot &nbsp;
+  .container
+    section1
+      .type-drop
+        button.dropbtn Plants by Type
+        .type-content
+          a(href='/collections/indoor-plants') Indoor
+          a(href='/collections/outdoor-plants') Outdoor
+      .season-drop
+        button.dropbtn Plants by Season
+        .season-content
+          a(href='/collections/summer-plants') Summer
+          a(href='/collections/winter-plants') Winter
+          a(href='/collections/monsoon-plants') Monsoon
+          a(href='/collections/all-season-plants') All
+      .category-drop
+        button.dropbtn Plants by Category
+        .category-content
+          a(href='/collections/flower') Flower
+          a(href='/collections/fruit') Fruit
+          a(href='/collections/vegetable') Vegetable
+          a(href='/collections/ornamental') Ornamental
+          a(href='/collections/seeds') Seeds
+          a(href='/collections/pots') Pots
+          a(href='/collections/soil-and-fertilizer') Soil &amp; Fertilizer
+      .pots-drop
+        button.dropbtn Pots by Type
+        .pots-content
+          a(href='/collections/ceramic-pots') Ceramic Pots
+          a(href='/collections/earthern-pots') Earthern Pots
+          a(href='/collections/plastic-pots') Plastic Pots
+      .seeds-drop
+        button.dropbtn Seeds by Type
+        .seeds-content
+          a(href='/collections/vegetable-seeds') Vegetable Seeds
+          a(href='/collections/flower-seeds') Flower Seeds
+          a(href='/collections/shrub-seeds') Shrub Seeds
+    section2
+      a.indoor(href='/collections/indoor-plants')
+        .explore
+          img(src='/images/indoor.jpg', alt='indoor plant')
+      a.outdoor(href='/collections/outdoor-plants')
+        .explore
+          img(src='/images/outdoor.jpg', alt='outdoor plant')
+      a.bonsai(href='/collections/bonsai-plants')
+        .explore
+          img(src='/images/bonsai.jpg', alt='bonsai plant')
+      a.air-purify(href='/collections/air-purify-plants')
+        .explore
+          img(src='/images/air-purify.jpg', alt='air purify plant')
+      a.low-maintain(href='/collections/air-purify-plants')
+        .explore
+          img(src='/images/low-maintain.jpg', alt='low-maintain plant')
+      a.fruit(href='/collections/fruit')
+        .explore
+          img(src='/images/fruit.jpg', alt='fruit plant')
+      a.aromatic(href='/collections/aromatic-plants')
+        .explore
+          img(src='/images/aromatic.jpg', alt='aromatic plant')
+      a.tools(href='/collections/tools')
+        .explore
+          img(src='/images/tools.jpg', alt='tools')
+  script(src='/index.js')
